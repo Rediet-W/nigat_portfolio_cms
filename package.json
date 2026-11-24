@@ -1,0 +1,40 @@
+{
+  "name": "nigat-portfolio-cms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Headless CMS (Strapi) for the Nigat Group websites: Construction, Motors and Exports.",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "typecheck": "tsc --noEmit",
+    "types:generate": "strapi ts:generate-types",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "seed": "node scripts/seed/index.js"
+  },
+  "dependencies": {
+    "@strapi/plugin-users-permissions": "5.47.0",
+    "@strapi/provider-upload-cloudinary": "5.47.0",
+    "@strapi/strapi": "5.47.0",
+    "better-sqlite3": "12.8.0",
+    "pg": "^8.21.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=24.x.x",
+    "npm": ">=6.0.0"
+  }
+}

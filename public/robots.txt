@@ -1,0 +1,3 @@
+# Block all crawlers — this is a private CMS.
+User-agent: *
+Disallow: /

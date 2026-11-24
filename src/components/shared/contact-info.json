@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_contact_infos",
+  "info": {
+    "displayName": "Contact Info",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "phoneAlt": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "address": {
+      "type": "text"
+    },
+    "hours": {
+      "type": "string",
+      "description": "Opening hours as displayed, e.g. \"9:00 AM – 5:00 PM\""
+    },
+    "mapUrl": {
+      "type": "string",
+      "description": "Google Maps link or embed URL"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscribers",
+  "info": {
+    "singularName": "subscriber",
+    "pluralName": "subscribers",
+    "displayName": "Newsletter Subscriber",
+    "description": "Newsletter sign-ups from the sector websites' footers."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "sector": {
+      "type": "enumeration",
+      "enum": ["construction", "motors", "exports"],
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "locale": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "Language the visitor used (en / am)"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["subscribed", "unsubscribed"],
+      "default": "subscribed",
+      "required": true
+    }
+  }
+}

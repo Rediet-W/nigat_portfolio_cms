@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_group_sector_links",
+  "info": {
+    "displayName": "Sector Link",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "enumeration",
+      "enum": [
+        "construction",
+        "motors",
+        "exports"
+      ],
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "description": "Public URL of the sector website"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

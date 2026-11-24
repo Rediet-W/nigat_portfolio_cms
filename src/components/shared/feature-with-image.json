@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_feature_with_images",
+  "info": {
+    "displayName": "Feature With Image",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imageAlt": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# Local development database only — production infrastructure is managed separately.
+#
+#   docker compose up -d     start Postgres
+#   docker compose down      stop it (data is kept)
+#   docker compose down -v   stop it and DELETE all local data
+#
+# Data lives in the named Docker volume below, not in the project folder.
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: nigat-cms-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DATABASE_NAME:-nigat_cms}
+      POSTGRES_USER: ${DATABASE_USERNAME:-nigat}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-nigat}
+    ports:
+      - "127.0.0.1:${DATABASE_PORT:-5433}:5432"
+    volumes:
+      - nigat-cms-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  nigat-cms-db:

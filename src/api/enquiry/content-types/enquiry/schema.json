@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enquiries",
+  "info": {
+    "singularName": "enquiry",
+    "pluralName": "enquiries",
+    "displayName": "Enquiry",
+    "description": "Contact form submissions from the sector websites."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "sector": {
+      "type": "enumeration",
+      "enum": [
+        "construction",
+        "motors",
+        "exports"
+      ],
+      "required": true
+    },
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 120
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "company": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "topic": {
+      "type": "string",
+      "maxLength": 120,
+      "description": "Service / category slug or \"general\""
+    },
+    "message": {
+      "type": "text",
+      "required": true,
+      "maxLength": 5000
+    },
+    "locale": {
+      "type": "string",
+      "maxLength": 8,
+      "description": "Language the visitor used (en / am)"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "in_progress",
+        "closed"
+      ],
+      "default": "new",
+      "required": true
+    },
+    "internalNotes": {
+      "type": "text",
+      "description": "Staff only — never exposed publicly"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faq_groups",
+  "info": {
+    "singularName": "faq-group",
+    "pluralName": "faq-groups",
+    "displayName": "FAQ Group",
+    "description": "A titled group of questions on the FAQ page."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "sector": {
+      "type": "enumeration",
+      "enum": [
+        "construction",
+        "motors",
+        "exports"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "description": "Which Nigat sector website shows this entry"
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "anchor": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "regex": "^[a-z0-9-]+$",
+      "description": "Page anchor (#vehicles) — identical in every language"
+    },
+    "items": {
+      "type": "component",
+      "component": "faq.item",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "order": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0,
+      "description": "Lower numbers are shown first"
+    }
+  }
+}

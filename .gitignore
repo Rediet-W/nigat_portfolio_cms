@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Environment — secrets never go to git (.env.example does)
+.env
+.env.*
+!.env.example
+
+# Build output and Strapi caches
+dist/
+build/
+.strapi/
+.cache/
+.strapi-updater.json
+.strapi-cloud.json
+*.tsbuildinfo
+
+# Local data: SQLite file (if used) and uploaded media
+.tmp/
+*.db
+*.sqlite
+*.sqlite3
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
